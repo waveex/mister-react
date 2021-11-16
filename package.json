@@ -6,23 +6,33 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "ansi-html": "0.0.7",
+    "ansi-regex": "^6.0.1",
+    "browserlist": "^1.0.1",
+    "glob-parent": "^6.0.2",
+    "immer": "^9.0.6",
+    "nth-check": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
+  "lint-staged": {
+      "src/**/*.{js,json}": [
+        "prettier --write"
+      ]
+     },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+    "husky": {
+       "hooks": {
+         "pre-commit": "lint-staged"
+        }
+      },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,5 +44,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "prettier": "^2.4.1"
+  },
+  "resolutions": {
+    "ansi-regex": "^6.0.1",
+    "nth-check": "^2.0.1",
+    "immer": "^9.0.6",
+    "ansi-html": "^0.0.7",
+    "glob-parent": "^6.0.2"
   }
 }
